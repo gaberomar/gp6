@@ -1,0 +1,81 @@
+﻿
+<script>
+function getParam ( sname )
+{
+	var params = location.search.substr(location.search.indexOf("?")+1);
+	var sval =  params.replace("sv=", "");
+	return sval;
+}
+var sv = getParam("sv");
+</script>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.1.4.js" type="7fd48e4e9b637a138f663eba-text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.js"></script>
+
+<script src="https://cdn.jsdelivr.net/clappr.chromecast-plugin/latest/clappr-chromecast-plugin.js"></script>
+<script async src='https://raw.githack.com/cdn-cgi/bm/cv/2172558837/api.js'></script></head>
+<body style="margin:0px">
+<div style="background:#ccc;" id="player"></div>
+<script>
+	if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Mobile Safari/i) || navigator.userAgent.match(/Blackberry/i)){
+		document.write("\<video style=\"width:100%;height:100%\" controls autoplay preload=\"auto\" src=\""+sv+"\"\>\<\/video\>");
+	}else {
+		player = new Clappr.Player({
+			source: sv,
+			parentId: '#player',
+			width: '100%', height: '100%',
+			hideMediaControl: true,
+			autoPlay: true
+		});	
+	}
+	</script>
+	<style type="text/css">
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.twitter-widget {
+    z-index: 70;
+    right: 10px;
+    transition: all .3s;
+    position: absolute;
+    top: 10px;
+}
+
+.media-control[data-media-control] .media-control-background[data-background]::before {
+    font-size: 2vw;
+    color: #fff;
+    text-align: center;
+    font-family:Changa,"Segoe UI";
+    font-weight: bold;
+content: " http://kora-g.ml | موقع كوره جي لايف  ";
+}
+
+.media-control[data-media-control] .media-control-background[data-background] {
+    opacity: 1!important;
+}
+.media-control[data-media-control] .media-control-background[data-background] {
+    height: 15%!important;
+}
+
+.media-control[data-media-control] .media-control-layer[data-controls]{height:25px!important;background-color:rgba(0,0,0,.31)}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]{top:-14px}
+.container[data-container] span{display:none}
+</style>
+<span style="background: transparent; box-sizing: border-box; color: white; font-size: 10px; font-weight: bold; height: 25px; padding: 0px 5px; position: absolute; right: 60px; top: 400px; width: 90px;"></span>
+<img src="https://4.bp.blogspot.com/-sFSJEUuP3Mk/Xsgn8tTzeUI/AAAAAAAAI74/1-2cWuB6lEQHfurX7_3APszuU8Reg9aLACK4BGAYYCw/s1600/logo1.png" pagespeed_url_hash="b8e6b5a44e2403b" style="border: none; box-sizing: border-box; height: 30px; padding: 0px; position: absolute; right: 15px; top: 20px; vertical-align: middle; width: 90px;" />
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'58aabf06ed6cedbb',m:'a4594c322560271b4166504730b9a5056ecd18a4-1588013605-1800-Adfpbq1JryTLWWAlCLgSxOqTuTRPs3E7ilOOpJIf1I9Ej4GPPpjkfdmTAsYAeQbOxrS55Qc1rpaUkB+JkFNnnRUxS/lLG6DniL7PpuBmwAMYeztdUTh9eEBvH7iCt8brDnSGLCVtlQ22K3vB6+UKVs81pHakjTVAaE8DagOKez2r',s:[0x6f3f8fd586,0x7ca20708b9],fb:0,}})();</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'5975de650a6c08a7',m:'ac65a7fe8dcf93c0cc97b7690d3d725754acfbeb-1590143499-1800-AQxfqLZinoWmwMhUglhDu0AGzyLQ2x/GT8lPBvmnG5GNbAFzOCOhiOJqZDvpPHhP+xOsC6y9tgPt1Df610sIoJQUzc5pfj/pKxGy2iPe/zwX9v1ym8ga5wU1X3d9HhHw/mb7rqASchabPDl9zJxVeLY=',s:[0x3f9cc4276c,0x2df056895d],}})();</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'597c5250cd49e907',m:'e1f7362abd5bd669b915a40b7d87632bb11c45ed-1590211161-1800-AUc/QxJzE1MswqVC+xE8rEBz3Oz9VeI8tUjkAvSOxiHc0FTyKkyPOsyBWT0H37VFY6oPFFCe4dO5iPqwsby/QGI9ZTT6Nfb+g9sxgaCVG7NBZuIgWEvhhC/3vSyuSOtwPYi7gpy5lDH4YXoLgFUhF7c=',s:[0x01e3116460,0xa329a9c8e4],}})();</script></body>
+</html>
+
+
+
+
+

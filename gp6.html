@@ -1,87 +1,21 @@
-﻿
-<html>
-<head>
-<script type="7fd48e4e9b637a138f663eba-text/javascript">
-function getParam ( sname )
-{
-  var params = location.search.substr(location.search.indexOf("?")+1);
-  var sval =  params.replace("sv=", "");
-  
-  return sval;
-}
-var sv = getParam("sv");
+<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js" type="0213d646d3cb12045747583c-text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js" type="0213d646d3cb12045747583c-text/javascript"></script>
+  <script type="0213d646d3cb12045747583c-text/javascript" src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.js"></script>
+  <script src="https://cdn.jsdelivr.net/clappr.chromecast-plugin/latest/clappr-chromecast-plugin.js" type="0213d646d3cb12045747583c-text/javascript"></script>
+<style id='page-skin-1' type='text/css'><!--
+*{margin:0; padding:0; }
+#player{width: 100vw; height: 100vh;}
+
+--></style>
+  </head>
+<body style="margin:0;background:#000;">
+<div id="iframeDiv" style="width: 100%;">
+ <body onload="init()">
+<div id='player'></div>
+<script type="0213d646d3cb12045747583c-text/javascript">
+//<![CDATA[ 
+player=new Clappr.Player({source:window.atob("aHR0cHM6Ly92aWRlby1hbXMueHguZmJjZG4ubmV0L2h2aWRlby1hc2gyNjUvdi9yNGFvSzVDNzlEdXVvY19ZSG5TM1UvX25jX29oYy1qRFByZF9ncWRNSUFYOHVzMmMxL2xpdmUtZGFzaC9kYXNoLWFici1pYnItYXVkaW8vMTQ0OTA3ODUwODExMjk1Lm1wZD9fbmNfcmw9QWZCd1dXWHhZeUhDUXlBNl91VSZtcz1tX0NUJm9oPTAxMmM4MjgzMDA1MWRjODE5YzU3NWQzMWZhMWVjZTAyJm9lPTYwMjdCQkI4"),
+plugins:[DashShakaPlayback,LevelSelector,ChromecastPlugin],parentId:"#player",width:"100%",height:"100%",poster:"",hideMediaControl:!0,mediacontrol:{seekbar:"#007acc",buttons:"#007acc"},chromecast:{appId:"9DFB77C0",contentType:"video/mp4",media:{type:ChromecastPlugin.Movie,title:"yalla shoot 7sry",subtitle:"You won't get much closer to Skylining than this!"}},autoPlay:!0});
+//]]>
 </script>
-<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
-<script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.js"></script>
-<script src="https://cdn.jsdelivr.net/clappr.chromecast-plugin/latest/clappr-chromecast-plugin.js"></script>
-<script async src='https://raw.githack.com/cdn-cgi/bm/cv/2172558837/api.js'></script>
-</head>
-<body>
-<div id="player">
-</div>
-<script type="7fd48e4e9b637a138f663eba-text/javascript">
-var playerElement = document.getElementById("player");
-var player = new Clappr.Player({
- height: "100%",
- width: "100%",
-  plugins: {
-    'core': [LevelSelector]
-  },
- hlsjsConfig: {
- p2pConfig: {
-            wsSignalerAddr: 'wss://cdg3.edge.tmed.pw',
-        
-        },
- xhrSetup: function(xhr, url) {
-  xhr.withCredentials = false;
- }
- 
- }
-});
-player.attachTo(playerElement);
-player.load({ source: sv, mimeType: 'application/vnd.apple.mpegurl'});
-player.play();
-</script>
-
-<style type="text/css">
-body {
-    overflow: hidden;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-.twitter-widget {
-    z-index: 70;
-    right: 10px;
-    transition: all .3s;
-    position: absolute;
-    top: 10px;
-}
-
-.media-control[data-media-control] .media-control-background[data-background]::before {
-    font-size: 2vw;
-    color: #fff;
-    text-align: center;
-    font-family:Changa,"Segoe UI";
-    font-weight: bold;
-content: " http://kora-g.ml | موقع كوره جي لايف  ";
-}
-
-.media-control[data-media-control] .media-control-background[data-background] {
-    opacity: 1!important;
-}
-.media-control[data-media-control] .media-control-background[data-background] {
-    height: 15%!important;
-}
-
-.media-control[data-media-control] .media-control-layer[data-controls]{height:25px!important;background-color:rgba(0,0,0,.31)}.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar]{top:-14px}
-.container[data-container] span{display:none}
-</style>
-<script data-cf-settings="7fd48e4e9b637a138f663eba-|49" defer="" src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"></script>
-
-<span style="background: transparent; box-sizing: border-box; color: white; font-size: 10px; font-weight: bold; height: 25px; padding: 0px 5px; position: absolute; right: 60px; top: 400px; width: 90px;"></span><img src="https://1.bp.blogspot.com/-JfWb2LWM2_M/Xqt1muzh4CI/AAAAAAAAI1I/mHIUUcGGnMMQ_nrZ-1lfIeMoRM2OpLmBQCK4BGAYYCw/s1600/logo1.png" pagespeed_url_hash="b8e6b5a44e2403b" style="border: none; box-sizing: border-box; height: 30px; padding: 0px; position: absolute; right: 15px; top: 20px; vertical-align: middle; width: 90px;" />
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'58aabf06ed6cedbb',m:'a4594c322560271b4166504730b9a5056ecd18a4-1588013605-1800-Adfpbq1JryTLWWAlCLgSxOqTuTRPs3E7ilOOpJIf1I9Ej4GPPpjkfdmTAsYAeQbOxrS55Qc1rpaUkB+JkFNnnRUxS/lLG6DniL7PpuBmwAMYeztdUTh9eEBvH7iCt8brDnSGLCVtlQ22K3vB6+UKVs81pHakjTVAaE8DagOKez2r',s:[0x6f3f8fd586,0x7ca20708b9],fb:0,}})();</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'5975de650a6c08a7',m:'ac65a7fe8dcf93c0cc97b7690d3d725754acfbeb-1590143499-1800-AQxfqLZinoWmwMhUglhDu0AGzyLQ2x/GT8lPBvmnG5GNbAFzOCOhiOJqZDvpPHhP+xOsC6y9tgPt1Df610sIoJQUzc5pfj/pKxGy2iPe/zwX9v1ym8ga5wU1X3d9HhHw/mb7rqASchabPDl9zJxVeLY=',s:[0x3f9cc4276c,0x2df056895d],}})();</script>
-</body>
-</html>
-
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="0213d646d3cb12045747583c-|49" defer=""></script>
